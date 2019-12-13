@@ -3,10 +3,10 @@ import random
 import string
 
 def gen_hex(length): #this helps generate valid HEX addresses.
-    return ''.join(random.choice('0123456789ABCDEF') for _ in range(length))
+    return ''.join(random.choice('0123456789abcdef') for _ in range(length))
 
 def gen_00mac(): #this generates a 00-XX-XX-XX-XX-XX mac address
-    generated = '00' + gen_hex(2) + gen_hex(2) + gen_hex(2) + gen_hex(2) + gen_hex(2)
+    generated = '00' + '04' + 'f2' + gen_hex(2) + gen_hex(2) + gen_hex(2) + '.cfg'
     return generated
 
 def gen_list(what): #this generates our hex list.
